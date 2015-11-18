@@ -13,10 +13,12 @@ class CreateTableTest extends Migration
     public function up()
     {
         Schema::create('test', function (Blueprint $table) {
+            
+            //what test......like blood test
             $table->integer('test_id');
-             $table->primary('test_id');
+            $table->primary('test_id');
 
-
+            //what category (for test)...like orthopadics....fracture....neuro
             $table->integer('category_id');
             $table->foreign('category_id')->references('category_id')->on('test_category');
 
