@@ -13,7 +13,7 @@ class CreateTestCategoryTable extends Migration
     public function up()
     {
         Schema::create('test_category', function (Blueprint $table) {
-            $table->integer('category_id');
+            $table->unsignedInteger('category_id');
             $table->primary('category_id');
             $table->string('name');
             $table->string('description')->nullable();

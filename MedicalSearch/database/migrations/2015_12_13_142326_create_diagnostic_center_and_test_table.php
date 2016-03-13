@@ -13,10 +13,15 @@ class CreateDiagnosticCenterAndTestTable extends Migration
     public function up()
     {
         Schema::create('diagnostic_center_and_test', function (Blueprint $table) {
-            $table->integer('diagnostic_center_id');
-            $table->foreign('diagnostic_center_id')->references('diagnostic_center_id')->on('diagnostic_center');
-            $table->integer('test_id');
-            $table->foreign('test_id')->references('test_id')->on('test');
+            $table->unsignedInteger('diagnostic_center_id')->nullable();
+
+            $table->foreign('diagnostic_center_id')->references('id')
+            ->on('diagnostic_center')->onUpdate('cascade')->onDelete('cascade'); 
+            
+            $table->unsignedInteger('test_id')->nullable();
+            $table->foreign('test_id')->references('id')
+            ->on('test')->onUpdate('cascade')->onDelete('cascade'); 
+            
             $table->string('price');
             $table->string('additional_info')->nullable();
             $table->timestamps();

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableTest extends Migration
+class CreateTestTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,13 +15,14 @@ class CreateTableTest extends Migration
         Schema::create('test', function (Blueprint $table) {
             
             //what test......like blood test
-            $table->integer('test_id');
-            $table->primary('test_id');
+            $table->unsignedInteger('id');
+            $table->primary('id');
 
             //what category (for test)...like orthopadics....fracture....neuro
-            $table->integer('category_id');
-            $table->foreign('category_id')->references('category_id')->on('test_category');
+            $table->unsignedInteger('category_id');
 
+            //$table->foreign('company_id')->references('id')->on('company')->onUpdate('cascade')->onDelete('cascade'); 
+            
            
            
             $table->string('name');
@@ -30,6 +31,10 @@ class CreateTableTest extends Migration
             $table->string('description')->nullable();
             $table->timestamps();
             $table->boolean('delete_status')->default(false);
+
+            $table->foreign('category_id')->references('category_id')->on('test_category')
+            ->onUpdate('cascade')->onDelete('cascade'); 
+
         });
     }
 

@@ -14,12 +14,15 @@ class CreateCompanyTable extends Migration
     {
         Schema::create('company', function (Blueprint $table) {
             
-            $table->integer('company_id');
-            $table->primary('company_id');
+
+            $table->increments('id');
             $table->string('name');
-            $table->string('description')->nullable();
-            $table->timestamps();
+            $table->integer('user_id')->unsigned();
+           $table->string('description')->nullable();
             $table->boolean('delete_status')->default(false);
+            $table->timestamps();
+            
+           $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade'); 
 
         });
     }

@@ -2,29 +2,41 @@
 <html>
 <body>
 
-<form action="results" method="get">
-  
-  <input type="Name" name="search">    <input type="submit" value="SEARCH">
-   
-   	<br>
-	<select name="CompanyName">
 
-		<option value=  "All"  >  All  </option>
+<form action="{{ url('results') }}" method="POST" >
+ 
+	
+	<input type="submit" value="submit">
+   	 
+   	<br>
+	and  <select name="TestName">
+
+	 
 		   
-		@foreach($company_name as $company)
+		@foreach($tests as $test)
 			
-		<option value=  <?php echo $company->name; ?>  >  <?php echo $company->name; ?>  </option>
+		<option value=  {{$test->id}}  >  {{$test->name }}  </option>
 		   
 			
 		@endforeach
 
 	</select>
+ 
+ <meta name="csrf-token" content="{{ csrf_token() }}" />
+ <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-
-	
 </form>
 
+<hr>
+	<a href="/User">User's Profiles</a>
+	<br>
+	@if(Auth::check())
+	<?php echo '<br>you are logged in as ' ."<a href=\"/User/$userId->id\"></a>".$userId->name;  ?>
+	@else 
+	<?php echo "<a href=\"/login\">Login</a>"; ?>
+	@endif
 
+	
 
 
 

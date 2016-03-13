@@ -14,14 +14,41 @@
 Route::get('', 'PageController@index');
 
 
+// Authentication routes...
+Route::get('login', 'myAuth@getLogin');
+Route::get('logout', 'myAuth@getLogout');
+Route::post('login', 'myAuth@postLogin');
+
+
+//Route::post('auth/login', 'Auth\AuthController@postLogin');
+//Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+//Route::get('auth/register', 'Auth\AuthController@getRegister');
+//Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
 Route::get('results', 'PageController@search');
 
-Route::get('user/{id}', function(Request $request, $id)
-{
-    if ($request->route('id'))
-    {
-        //
-    }
-});
+
+Route::post('results', 'PageController@search_result');
+/*
+Route::post('results', function(Request $request){
+	//echo '1234';
+	//echo $request->input('search');
+	dd (Input::all());
+	dd($request);
+
+});*/
+
+
+Route::get('test/{id}','PageController@showTest');
+
+//User profile
+Route::resource('User', 'UserLoginController');
+
+Route::get('User/{id}/posts', 'UserPostController@index');
+
+
 
 ?>

@@ -9,8 +9,13 @@ class Test extends Model
 	protected $table='test';
     //
 
-    public function description()
+    public function category()
     {
-    	return $this->belongsTo('App\TestCategory','foreign_key','category_id');
+    	return $this->belongsTo('App\TestCategory');
+    }
+    public function DiagnosticCenterAndTest()
+    {
+        echo 'ononon';
+    	return $this->hasMany('App\DiagnosticCenterAndTest','test_id');	
     }
 }

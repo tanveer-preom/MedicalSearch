@@ -13,11 +13,15 @@ class CreateDiagnosticCenterTable extends Migration
     public function up()
     {
         Schema::create('diagnostic_center', function (Blueprint $table) {
-            $table->integer('diagnostic_center_id');
-            $table->primary('diagnostic_center_id');
+            $table->increments('id');
+           
             $table->string('name');
-            $table->integer('company_id');
-            $table->foreign('company_id')->references('company_id')->on('company');
+
+            $table->unsignedInteger('company_id');
+
+
+            $table->foreign('company_id')->references('id')->on('company')->onUpdate('cascade')->onDelete('cascade'); 
+
             $table->double('latitude');
             $table->double('longitude');
             $table->timestamps();
