@@ -15,8 +15,8 @@ class CreateTestTable extends Migration
         Schema::create('test', function (Blueprint $table) {
             
             //what test......like blood test
-            $table->unsignedInteger('id');
-            $table->primary('id');
+            //$table->unsignedInteger('id');
+            $table->increments('id');
 
             //what category (for test)...like orthopadics....fracture....neuro
             $table->unsignedInteger('category_id');

@@ -133,7 +133,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('test')->insert(
             [
-                'id'=>'1',
+               // 'id'=>'1',
                 'name' =>'head injury diagnosis',
                 'category_id' =>'130',
                 'description' =>'head injury and CT scan',
@@ -142,22 +142,22 @@ class DatabaseSeeder extends Seeder
 
         DB::table('test')->insert(
             [
-                'id'=>'2',
+                //'id'=>'2',
                 'name' =>'leg injury diagnosis',
                 'category_id' =>'170',
                 'description' =>'Xray, scan  and etc ',
             ]);
         DB::table('test')->insert(
             [
-                'id'=>'3',
-                'name' =>'Xray',
+                //'id'=>'3',
+                'name' =>'leg Xray',
                 'category_id' =>'170',
                 'description' =>'best quality with perfection',
             ]);
 
         DB::table('test')->insert(
             [
-                'id'=>'4',
+               // 'id'=>'4',
                 'name' =>'CT scan',
                 'category_id' =>'130',
                 'description' =>'best quality and reliable',
@@ -165,7 +165,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('test')->insert(
             [
-                'id'=>'5',
+             //   'id'=>'5',
                 'name' =>'head surgery',
                 'category_id' =>'130',
                 'description' =>'best doctor of country does this surgery',
@@ -255,6 +255,56 @@ class DatabaseSeeder extends Seeder
                 'additional_info'=>'best doctors and Xray machines',
 
             ]);
+
+        DB::table('district')->insert(
+            [
+                'name'=> 'Dhaka',
+               
+
+            ]);
+
+        DB::table('district')->insert(
+            [
+                'name'=> 'Sylhet',
+                 
+
+            ]);
+
+
+        DB::table('area')->insert(
+            [
+                'name'=> 'Mohommapur',
+                'district_id'=>'1'
+
+            ]);
+        DB::table('area')->insert(
+            [
+                'name'=> 'Shamoli',
+                'district_id'=>'1'
+
+            ]);
+
+        DB::table('area')->insert(
+            [
+                'name'=> 'Mirpur',
+                'district_id'=>'1'
+
+            ]);
+
+        DB::table('area')->insert(
+            [
+                'name'=> 'SUST',
+                'district_id'=>'2'
+
+            ]);
+
+        DB::table('area')->insert(
+            [
+                'name'=> 'Zinda bazar',
+                'district_id'=>'2'
+
+            ]);
+
 
         Model::unguard();
 

@@ -9,7 +9,7 @@ class TestCategory extends Model
     //
     protected $table='test_category';
 
-    public funtion Test()
+    public function Test()
     {
     	return $this->hasMany('App\Test');
     }

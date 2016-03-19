@@ -15,7 +15,7 @@ class Test extends Model
     }
     public function DiagnosticCenterAndTest()
     {
-        echo 'ononon';
+        //echo 'ononon';
     	return $this->hasMany('App\DiagnosticCenterAndTest','test_id');	
     }
 }

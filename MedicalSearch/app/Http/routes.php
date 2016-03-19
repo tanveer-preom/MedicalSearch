@@ -28,10 +28,12 @@ Route::post('login', 'myAuth@postLogin');
 //Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
+
+Route::get('details', 'PageController@show_details');
 Route::get('results', 'PageController@search');
 
 
-Route::post('results', 'PageController@search_result');
+Route::post('results', 'PageController@search_result_last');
 /*
 Route::post('results', function(Request $request){
 	//echo '1234';
