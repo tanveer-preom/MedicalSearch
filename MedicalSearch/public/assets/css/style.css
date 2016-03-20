@@ -1,0 +1,971 @@
+/*=================================
+||			Index 
+==================================*/
+/*
+|	1. font import [60]
+|	2. Global [66]
+
+		2.1 Button [89]
+		2.2 Navbar [153]
+		2.3 Header [250]
+		2.4 Form [310]
+		2.5 Pagination [350]
+		2.6 Typography [384]
+		2.7 Common properties [420]
+		2.8 Footer [508]
+		2.9 Section Spacing [646]
+
+|	3. Home page [656]
+
+		3.1 Header [660]
+		3.2 Intro [711]
+		3.3 Feature [748]
+		3.4 Portfolio [786]
+		3.5 Twitter feed [848]
+		3.6 Pricing [922]
+		3.8 Testimonial [991]
+
+|	4. About Page [1045]
+		
+		4.1 Our Story [1049]
+		4.2 Our Designation [1059]
+		4.3 Skill [1107]
+		4.4 Sponsor [1138]
+
+|	5. Service Page [1152]
+
+|	6. Portfolio Page [786]
+
+|	7. Gallery Page [1187]
+
+|	8. 404 Page [1277]
+
+|	9. Coming Soon Page [1342]
+
+|	10. Blog
+	
+		10.1 Multiple Blog [1423]
+		10.2 Single Blog [1471]
+		10.3 Sidebar [1633]
+
+|	11. Contact [1798]
+
+		11.1 Google map [1806]
+		11.2 Quick Contact [1817]
+		11.3 Contact Form [1857]
+
+*/
+
+/*================================= 1. font import  ===========================================*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+
+
+/*==================================  2. Global  ========================================*/
+
+body {
+	background-color: white;
+	font-family: 'Open Sans', sans-serif;;
+	font-weight: 400;
+	line-height: 1.45;
+	color: #333;
+}
+
+html {
+	font-size: 0.813em;
+}
+
+
+/* =-=--=-=-=-=-=-==-=-=-=-  2.1 Button   =-=-=-=-==-=-==-====-==-=- */
+
+.btn {
+	border: 1px solid #000;
+	border-radius: 0px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+        	transition: all 0.4s ease-in-out;
+}
+
+.btn-black {
+	background-color: #000;
+	color: #fff;
+}
+
+.btn-slategray {
+	background-color: #313131;
+	color: #fff;
+}
+
+.btn-white {
+	background-color: #fff;
+	color: #000;
+}
+
+.btn-black:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.btn-slategray:hover {
+	background-color: #000000;
+	color: #C0DBB4;
+}
+
+.btn-white:hover {
+	background-color: #dadada;
+	border: 1px solid #cdcdcd;
+	color: #000;
+}
+
+.blog-btn {
+    width: 100%;
+    border: 1px solid #dadada;
+    color: #000000;
+}
+
+.blog-btn span {
+    margin: 0px 15px;
+}
+
+.blog-btn:hover {
+	background-color: #000000;
+	border: 1px solid #000000;
+	color: #ffffff;
+}
+
+.pricing-btn {
+    background-color: #dadada;
+    border: 1px solid #dadada;
+    color: #fff;
+    margin-top: 25px;
+}
+
+
+/* =-=--=-=-=-=-=-==-=-=-=-  2.2 Navbar   =-=-=-=-==-=-==-====-==-=- */
+
+#mainNavigation {
+    margin-bottom: 0px;
+    background-color: #65A9D2;
+}
+
+#mainNavigation .navbar-nav li a {
+	color: #ffffff;
+	padding: 25px 15px;
+}
+
+#mainNavigation .navbar-nav li a:hover {
+	color: #262626;
+}
+
+.navbar-toggle {
+	border-color: #CECECE;
+}
+
+.navbar-toggle {
+	border-radius: 0px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.navbar .navbar-toggle .icon-bar {
+	background-color: #B9B9B9;
+}
+
+/* =-=--=-=-=-=-=-==-=-=-=-  2.3 Header   =-=-=-=-==-=-==-====-==-=- */
+
+ #home-page .page-head, 
+ #search_result-page .page-head {
+	background: url(../img/home-bg.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+	padding: 0px;
+}
+
+#doctors-page .page-head {
+	background: url(../img/doctors-bg.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+	padding: 0px;
+}
+
+#home-page .page-head .header-wrapper,
+#search_result-page .page-head .header-wrapper {
+	background-color: rgba(0,0,0,0.43);
+	padding: 115px 0px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#doctors-page .page-head .header-wrapper {
+	background-color: rgba(0,0,0,0.10);
+	padding: 85px 0px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.page-head .header-wrapper .welcome-speech {
+	margin-top: 6em;
+	color: #ffffff;
+}
+
+.page-head .header-wrapper .welcome-speech h1 {
+	margin-top: 5px;
+	text-shadow: 1px 2px 2px #000;
+}
+
+.page-head .header-wrapper .welcome-speech small {
+	font-size: 1.12em;
+	letter-spacing: 3px;
+}
+
+
+/* =-=--=-=-=-=-=-==-=-=-=-  2.4 Form   =-=-=-=-==-=-==-====-==-=- */
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-control {
+	background-color: #f9f9f9;
+	border: 1px solid #E0E0E0;
+	border-radius: 0px;
+	box-shadow: none;
+	height: auto;
+	padding: 14px 28px;
+}
+
+.form-control:focus {
+    border-color: #DADADA;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(150, 144, 144, 0.5);
+       -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(150, 144, 144, 0.5);
+    	-ms-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(150, 144, 144, 0.5);
+    	 -o-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(150, 144, 144, 0.5);
+    		box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(150, 144, 144, 0.5);
+}
+
+::-webkit-input-placeholder {
+   color: #969595;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #969595;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #969595;  
+}
+
+:-ms-input-placeholder {  
+   color: #969595;  
+}
+
+/*====================================== 2.5 pagination  ====================================*/
+
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover,
+.pagination>li>a:focus, 
+.pagination>li>a:hover, 
+.pagination>li>span:focus, 
+.pagination>li>span:hover {
+    color: #fff;    
+    background-color: #000;    
+    border-color: #000;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.pagination>li>a, .pagination>li>span {
+    margin-left: 5px;
+    border-radius: 0px;
+    color: #dadada;
+    border: 2px solid #dadada;
+}
+
+/* =-=--=-=-=-=-=-==-=-=-=-  2.6 Typography   =-=-=-=-==-=-==-====-==-=- */
+
+h1, h2, h3, h4 {
+	margin: 1.414em 0 0.5em;
+	font-weight: inherit;
+	line-height: 1.2;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 3.157em;
+}
+
+h2 {
+	font-size: 2.369em;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 1.777em;
+}
+
+h4 {
+	font-size: 1.333em;
+}
+
+p {
+	color: #969595;
+	line-height: 1.62em;
+	margin-bottom: 1.3em;
+}
+
+small, .font_small {
+	font-size: 0.75em;
+}
+
+/* =-=-=-=--=-=-==-=-=-=-=-  2.7 Other common properties    =-=-=-=-=-=-=-=-==-=-=-=-=-=-=*/
+
+a {
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.bg-light-gray {
+	background-color: #f9f9f9;
+}
+
+.bg-white {
+	background-color: #ffffff;
+}
+
+blockquote {
+	border: 1px solid #f1f1f1;
+	font-size: 15px;
+	margin: 40px 0px;
+	padding: 20px 50px;
+}
+
+blockquote p {
+    margin: 0px 20px;
+}
+
+blockquote p:before {
+	color: #f1f1f1;
+    content: "\f10d";
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    margin-left: -40px;
+    position: absolute;
+}
+
+blockquote footer {
+	background-color: transparent;
+	color: #000000;
+	font-size: 14px;
+    padding: 10px 0px;
+    margin: 10px 20px 0;
+}
+
+.breadcrumb {
+	background-color: transparent;
+	font-size: 15px;
+	float: right;
+  	text-transform: uppercase;
+}
+
+.breadcrumb a {
+    color: #C7C4C0;
+}
+
+.breadcrumb a:hover {
+	color: #ffffff;
+}
+
+.breadcrumb>.active {
+	color: #fff;
+}
+
+.breadcrumb>li+li:before {
+	padding: 0 10px;
+	color: #C7C4C0;
+	font-family: 'FontAwesome';
+	content: "\f101";
+}
+
+li {
+	list-style: none;
+}
+
+th {
+	text-align: center;
+}
+
+.section-title {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+.section-sub-title {
+	color: #969595;
+	margin-bottom: 0px;
+	text-transform: capitalize;
+	word-spacing: 1px;
+}
+
+/* =-=--=-=-=-=-=-==-=-=-=- 2.8  Footer   =-=-=-=-==-=-==-====-==-=- */
+
+footer {
+	background-color: #313131;
+	color: #fff;
+	font-size: 12px;
+	padding: 85px 0px;
+}
+
+footer h4 {
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+footer .footer-links {
+	padding: 0px;
+}
+
+footer .input-group {
+	margin-right: 40px;
+}
+
+footer .input-group .form-control {
+	font-size: 12px;
+	padding: 5px 10px;
+}
+
+footer .input-group span.input-group-addon {
+    border-radius: 0px;
+    color: #fff;
+    background-color: #000;
+    border: 0px;
+}
+
+.footer-links li {
+	margin-bottom: 10px;
+}
+
+.footer-links li a {
+	color: #969595;
+}
+
+.footer-links li:hover a {
+	color: #ffffff;
+}
+
+.footer-links li a:before {
+	color: #fff;
+	font-family: 'FontAwesome';
+	content: "\f101";
+	margin-right: 10px;
+}
+
+.footer-news {
+	margin-bottom: 35px;
+}
+
+.footer-news p {
+	margin-bottom: 5px;
+	margin-top: -4px;
+	line-height: 1.45em;
+}
+
+.footer-news p a {
+	color: #ffffff;
+}
+
+.footer-news p.news-date {
+	color: #969595;
+	font-size: 10px;
+	margin-top: -2px;
+}
+
+.footer-address p {
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer-share-button {
+    padding: 0px;
+}
+
+.footer-share-button li {
+    display: inline-block;
+}
+
+.footer-share-button li a i {
+	background-color: #4a4a4a;
+	border-radius: 0px;
+	color: #6b6b6b;
+	font-size: 12px;
+	font-weight: 600;
+	height: 30px;
+	line-height: 28px;
+	text-align: center;
+	width: 30px;
+}
+
+.footer-share-button li a i:hover {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+@media (max-width: 991px) {
+	footer h4 {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 550px) {
+	.footer-widget {
+		width: 100%;
+	}
+}
+
+
+/* =-=--=-=-=-=-=-==-=-=-=-  2.9 Section-spacing   =-=-=-=-==-=-==-====-==-=- */
+
+.headline {
+	margin-bottom: 50px;
+}
+
+/*================================================================
+							Home
+==================================================================*/
+
+.search-widget {
+	margin: -31px auto 31px auto;
+	width: 80%;
+}
+
+.search-widget .input-group .form-control {
+	background-color: #ffffff;
+	box-shadow: 0px 3px 5px 0px #969595;
+	padding: 25px;
+}
+
+.search-widget .input-group a.input-group-addon {
+	background-color: #ffffff;
+	box-shadow: 0px 3px 5px 0px #969595;
+}
+
+.search-widget .input-group a.input-group-addon i {
+	color: #65B7E8;
+}
+
+/*--------------------------- intro  ------------------------------------*/
+
+.intro {
+	padding: 5.6285em 0;
+}
+
+.intro .intro-description {
+	padding-left: 40px;
+}
+
+.intro .intro-description h2 {
+	font-size: 30px;
+	margin-top: -10px;
+	text-transform: uppercase;
+}
+
+.intro .intro-description p {
+	font-size: 14px;
+	padding: 2px 60px 5px 0px;
+}
+
+.intro .intro-description .points {
+	padding: 0px;
+}
+
+.intro .intro-description .points li {
+    margin-bottom: 15px;
+}
+
+.intro .intro-description .points li span {
+	margin-right: 10px;
+}
+
+.intro .intro-description .points li span i{
+	color: #5A9AC1;
+}
+
+.intro .intro-description .btn {
+	margin-top: 20px;
+}
+
+/*-----------------------------------  service ----------------------------------------*/
+
+.service-content {
+    margin-bottom: 2.714em;
+}
+
+.service-icon {
+	background-color: #fff;
+	border: 1px solid #4CA7DE;
+	border-radius: 50%;
+    color: #65B7E8;
+    font-size: 45px;
+    height: 90px;
+    line-height: 90px;
+    width: 90px;
+    -webkit-transition: all 0.4s ease-in-out;
+       -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+         -o-transition: all 0.4s ease-in-out;
+        	transition: all 0.4s ease-in-out;
+}
+
+.service-content:hover .service-icon {
+	background-color: #65B7E8;
+	border: 1px solid #58B3E2;
+	color: #fff;
+}
+
+.service-heading {
+	font-size: 21px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.service-description {
+    padding: 10px 27px;
+}
+
+/*---------------------------  testimonial ------------------------------*/
+
+#client-speech .client-box {
+	background-color: #fff;
+	border: 1px solid #eee;
+    box-shadow: 1px 2px 3px #cdcdcd;
+    margin-bottom: 2.714em;
+    padding: 40px;
+}
+
+#client-speech .client-box .main-speech p {
+	font-size: 13px;
+	margin-top: 5px;
+}
+
+@media (max-width: 991px) {
+	.intro .intro-description h2 {
+		margin-top: 1.414em;
+	}
+}
+
+@media (max-width: 991px) and (min-width: 700px) {
+	.intro .intro-description {
+		padding-left: 60px;
+	}
+}
+
+@media (max-width: 600px) {
+	#client-speech .client-box .main-speech {
+		margin-top: 25px;
+	}
+}
+
+
+/* ==================================================================
+								 3. Doctor
+==================================================================== */
+
+
+/* ------------------------------------------  3.1 doctor-list --------------------------------- */
+
+.team-button h1 {
+    margin-bottom: 0px;
+}
+
+.main-title {
+    background-color: rgba(101, 169, 210, 0.85);
+    display: inline-block;
+    padding: 15px 50px;
+    color: #fff;
+    float: right;
+}
+
+.sub-title {
+    padding: 15px 20px;
+    float: right;
+    background-color: rgba(101, 169, 210, 0.85);
+    color: #fff;
+}
+
+.doctor-list {
+    padding-top: 100px;
+}
+
+.doctor-meta {
+    margin: 100px 0px 70px 0px;
+    padding: 120px 35px 36px;
+    border: 1px solid rgba(59, 77, 116, 0.29);
+    background-color: rgba(92, 145, 216, 0.27);
+    position: relative;
+}
+
+.doctor-meta .doctor-img {
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    margin-left: -85px;
+    border: 2px solid #c6c6c6;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.doctor-meta .doctor-img img {
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.doctor-info .doctor-name {
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.doctor-info .position {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.doctor-info .doctor-des {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.doctor-info .doctor-social .online-contact a {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background: cadetblue;
+    float: left;
+    color: white;
+    padding-top: 6px;
+    padding-left: 2px;
+}
+
+
+/*=============================================================================
+						4. About page
+=============================================================================*/
+
+/*-----------------------------  4.1 story   ------------------------------------*/
+
+.story .headline {
+	margin-bottom: 25px;
+}
+
+.story .story-description {
+	padding: 0px 20px;
+}
+
+/*------------------------------ 4.2 designation  -------------------------------------*/
+
+.designation .section-title {
+	margin-top: 0px;
+}
+
+.team-member-box {
+	border: 1px solid #dadada;
+	margin-bottom: 3.1269em;
+}
+
+.team-member-description {
+    padding: 20px 30px;
+}
+
+.team-member-about {
+    border-bottom: 1px solid #dadada;
+}
+
+.team-member-about h4 {
+    margin-top: 0;
+}
+
+.team-member-social {
+    padding-top: 12px;
+}
+
+.team-member-social a {
+	margin: 0px 3px;
+}
+
+.team-member-social a i {
+	background-color: #fff;
+	border: 1px solid #dadada;
+	border-radius: 50%;
+	color: #dadada;
+	font-size: 12px;
+	font-weight: 600;
+	height: 30px;
+	line-height: 28px;
+	width: 30px;
+}
+
+.team-member-social a i:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/*----------------------------------------- 4.3 skill  ------------------------------------*/
+
+.skill {
+    padding: 5.6285em 0;
+}
+
+.skill h2 {
+    font-size: 30px;    
+    margin-top: 0px;    
+    text-transform: uppercase;
+}
+
+.skill-level p {
+    margin-bottom: 3px;
+}
+
+.progress {
+    border-radius: 0px;
+    background-color: #fff;
+    box-shadow: none;
+    height: 25px;
+    margin-bottom: 15px;
+    border: 1px solid #dadada;
+}
+
+.progress-bar {
+    background-color: #000;
+    text-align: right;
+    padding-right: 15px;
+}
+
+/*---------------------------- 4.4 sponsor  -----------------------------*/
+
+.sponsor {
+    padding: 3.1269em 0;
+}
+
+#sponsor-list img {
+    opacity: 0.5;
+}
+
+#sponsor-list img:hover {
+    opacity: 1.0;
+}
+
+/* ---------------------------   search-resul  -----------------------*/
+
+.search-result {
+	padding: 5.6285em 0;
+}
+
+/*================================================================
+						11. Contact page
+==================================================================*/
+
+#contact-page section {
+	padding: 0px;
+}
+
+/*---------------------------  11.1 google map --------------------------*/
+.g-map {
+    margin: 50px 0px;
+}
+
+#map-canvas 
+{
+    width: 100%;
+    height: 400px;
+}
+
+/*----------------------------  11.2  quick contact  ------------------------*/
+.contact-address {
+	margin: 0px;
+}
+
+.contact-address .address-info {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 20px;
+	padding: 0px;
+}
+
+.contact-address .address-info .address-info-icon {
+    background-color: #f9f9f9;
+    border-right: 1px solid #f1f1f1;
+}
+
+.contact-address .address-info:hover .address-info-icon {
+    background-color: #000;
+    border-right: 1px solid #000;
+}
+
+.contact-address .address-info:hover .address-info-icon i{
+    color: #fff;
+}
+
+.contact-address .address-info .address-info-icon i {
+    position: relative;
+    padding: 62px 0px;
+    font-size: 30px;
+    color: #dadada;
+}
+
+.contact-address .address-info .address-info-desc {
+    padding: 0px 0px 16px 20px;
+}
+
+.contact-address .address-info .address-info-desc p {
+    font-size: 13px;
+}
+
+/*-------------------------------  11.3 contact form ---------------------------*/
+
+.contact-form {
+	margin: 25px 0px 90px 0px;
+}
+
+.contact-form .headline .section-title, 
+.contact-form .headline .section-sub-title {
+	text-transform: none;
+}
+
+.contact-form .btn-black {
+	float: right;
+	margin-top: 20px;
+}
