@@ -127,24 +127,30 @@ class PageController extends Controller {
         return view('result')->with('results',$test);
     }
 
-     public function search_result_last()
+    public function search_result_last()
     {   
         
         //dd($_POST);
-        $test_id= Input::all();
-        dd(Input::all());
-        return 'wow';
+        $test_category= Input::get('test_category');
+        $test= Input::get('test_name');
         
-        /*
-        $dump=\App\Test::find($test_id)->DiagnosticCenterAndTest;
-        foreach ($dump as $key  ) {
-            
-            //var_dump($key->DiagnosticCenter);  
-            echo $key.'<br>';
-            echo $key->DiagnosticCenter.'<br>'.'<br>'.'<br>'.'<br>'.'<br>';
-            //echo $key->
-        } 
-*/
+        $district= Input::get('district');
+        $area= Input::get('area');
+        
+
+        $result= \App\Test::all();
+        
+        if(is_int($test))
+            $result= $result->where('id',$test);
+
+
+        if(is_int($test_category))
+            $result= $result->where('category_id',$test_category);
+
+        //$result= $result->join('diagnostic_center_and_test','diagnostic_center_id','=','d');
+
+        //dd($result);
+
 
             $dummy= DB::table('test')
                     ->join('diagnostic_center_and_test','diagnostic_center_and_test.test_id','=','test.id')
@@ -155,13 +161,20 @@ class PageController extends Controller {
                     ->select('test.id as test_id','Company.name as name','test.name as TestName','diagnostic_center.name as DiagName',
                         'diagnostic_center_and_test.price as DiagPrice',
                         'diagnostic_center_and_test.additional_info as additional_info')
-                    
-                    ->where('test.id',$test_id);
+                    -> where('test_id',$test);
+
+        /*if(is_numeric($test))
+            $dummy=$dummy->where('test_id',$test);
+        else echo 'falase1';
         
-
-
-       
+         if(is_int($test_category))
+            $dummy=$dummy->where('test.category_id',$test_category);            
+        else echo 'falase2';
+       */
         $test=$dummy->get();
+        
+        dd($test);
+
         return view('result')->with('results',$test);
     }
 

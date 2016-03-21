@@ -77,6 +77,7 @@ class DatabaseSeeder extends Seeder
                 'company_id' =>'1',
                 'latitude' =>'99',
                 'longitude' =>'666',
+                'area_id'=>''
             ]);
 
          DB::table('diagnostic_center')->insert(
@@ -255,6 +256,110 @@ class DatabaseSeeder extends Seeder
                 'additional_info'=>'best doctors and Xray machines',
 
             ]);
+
+
+         DB::table('diagnostic_center_and_test')->insert(
+            [
+                'diagnostic_center_id'=>'1',
+                'test_id'=>'3',
+                'price' =>'1222',
+                'additional_info'=>'best service of head injur and good ct scan',
+
+            ]);
+
+
+        DB::table('diagnostic_center_and_test')->insert(
+            [
+                'diagnostic_center_id'=>'2',
+                'test_id'=>'3',
+                'price' =>'600',
+                'additional_info'=>'best doctors and Xray machines',
+
+            ]);
+
+        DB::table('diagnostic_center_and_test')->insert(
+            [
+                'diagnostic_center_id'=>'3',
+                'test_id'=>'3',
+                'price' =>'600',
+                'additional_info'=>'best doctors and Xray machines',
+
+            ]);
+
+        DB::table('diagnostic_center_and_test')->insert(
+            [
+                'diagnostic_center_id'=>'4',
+                'test_id'=>'3',
+                'price' =>'600',
+                'additional_info'=>'best doctors and Xray machines',
+
+            ]);
+
+        DB::table('diagnostic_center_and_test')->insert(
+            [
+                'diagnostic_center_id'=>'1',
+                'test_id'=>'4',
+                'price' =>'600',
+                'additional_info'=>'best doctors and Xray machines',
+
+            ]);
+
+        DB::table('diagnostic_center_and_test')->insert(
+            [
+                'diagnostic_center_id'=>'2',
+                'test_id'=>'4',
+                'price' =>'600',
+                'additional_info'=>'best doctors and Xray machines',
+
+            ]);
+
+
+
+        DB::table('diagnostic_center_and_test')->insert(
+            [
+                'diagnostic_center_id'=>'3',
+                'test_id'=>'2',
+                'price' =>'600',
+                'additional_info'=>'best doctors and Xray machines',
+
+            ]);
+
+
+        DB::table('diagnostic_center_and_test')->insert(
+            [
+                'diagnostic_center_id'=>'4',
+                'test_id'=>'2',
+                'price' =>'600',
+                'additional_info'=>'best doctors and Xray machines',
+
+            ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         DB::table('district')->insert(
             [

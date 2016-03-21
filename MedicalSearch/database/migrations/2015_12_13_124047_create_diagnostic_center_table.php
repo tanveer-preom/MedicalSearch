@@ -22,10 +22,17 @@ class CreateDiagnosticCenterTable extends Migration
 
             $table->foreign('company_id')->references('id')->on('company')->onUpdate('cascade')->onDelete('cascade'); 
 
-            $table->integer('area_id')->nullable();
+            
 
             $table->double('latitude');
             $table->double('longitude');
+            $table->unsignedInteger('area_id');
+
+            //$table->foreign('area_id')->references('id')->on('area')->onUpdate('cascade')->onDelete('cascade'); 
+            
+
+            $table->unsignedInteger('district_id')->nullable();             
+            //$table->foreign('district_id')->references('id')->on('district')->onUpdate('cascade')->onDelete('cascade'); 
 
             $table->timestamps();
             $table->boolean('delete_status')->default(false);
